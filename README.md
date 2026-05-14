@@ -11,7 +11,7 @@ This project contains a collection of helpful scripts designed for Linux environ
 * mood.sh: A terminal-based background music utility.
 
 ## **Installation**
-c
+
 To install or update the scripts, run the included installation script from the project root. This will copy the tools to /usr/local/bin and ensure they are executable.
 
 ```{Bash}
@@ -45,7 +45,7 @@ A cross-platform search utility that opens a Google search directly from your te
 
 A scaffolding utility to quickly initialize directory structures, virtual environments, and Git repositories for new projects.
 
-* Command: python3 sprout.py [project_name] [options]
+* Command: sprout [project_name] [options]
 
 * Supported Languages: Python, C, C++.
 

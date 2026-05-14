@@ -6,7 +6,7 @@ teleport - Instead of typing long paths, you "tag" a directory and jump back to 
 
 life - Display Conway's Game of Life in the terminal
 
-shredder - A security-focused version of upkeep's cleanup functions.
+shredder - A security-focused version of upkeep's cleanup functions. Overrites a file multiple times before removing it.
 
 winclip - A low-level bridge for the WSL/Windows clipboard.
 
