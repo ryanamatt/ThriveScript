@@ -7,6 +7,7 @@ This project contains a collection of helpful scripts designed for Linux environ
 * install\_scripts.sh: The installer that manages versioning and system PATH integration.  
 * upkeep.sh: A shell script for automated system updates and cleanup.  
 * wb.py: A Python-based web search tool that works across native Linux and WSL.
+* sprout.py: A Python-based project scaffolder.
 
 ## **Installation**
 c
@@ -39,7 +40,23 @@ A cross-platform search utility that opens a Google search directly from your te
 * **WSL Support:** If running inside WSL, it uses PowerShell to trigger the default browser on your Windows host.  
 * **Native Linux Support:** Uses the standard webbrowser module to open your default Linux GUI browser.
 
+### **3\. Sprout Project Scaffolder (sprout)**
+
+A scaffolding utility to quickly initialize directory structures, virtual environments, and Git repositories for new projects.
+
+* Command: python3 sprout.py [project_name] [options]
+
+* Supported Languages: Python, C, C++.
+
+* Key Features:
+
+  * Python: Automatically creates a venv, generates a pyproject.toml, and can install specified libraries using --libs.
+
+  * C/C++: Sets up a src/include/build directory structure and can generate a basic Makefile.
+
+  * Git Integration: Use the -g flag to initialize a Git repo and generate a language-specific .gitignore.
+
 ## **Requirements**
 
-* **Linux:** bash, python3, and apt package manager (for upkeep).  
+* **Linux:** bash, python3, git, and apt package manager (for upkeep).  
 * **WSL:** Ensure powershell.exe is available in your WSL path (standard in most setups) to use the wb command effectively.

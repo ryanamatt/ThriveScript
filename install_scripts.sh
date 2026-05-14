@@ -12,6 +12,7 @@ DEST_DIR="/usr/local/bin"
 FILES=(
     "upkeep.sh:upkeep"
     "wb.py:wb"
+    "sprout.py:sprout"
 )
 
 echo "Checking for updates..."
