@@ -13,6 +13,7 @@ FILES=(
     "upkeep.sh:upkeep"
     "wb.py:wb"
     "sprout.py:sprout"
+    "mood.sh:mood"
 )
 
 echo "Checking for updates..."

@@ -8,6 +8,7 @@ This project contains a collection of helpful scripts designed for Linux environ
 * upkeep.sh: A shell script for automated system updates and cleanup.  
 * wb.py: A Python-based web search tool that works across native Linux and WSL.
 * sprout.py: A Python-based project scaffolder.
+* mood.sh: A terminal-based background music utility.
 
 ## **Installation**
 c
@@ -56,7 +57,22 @@ A scaffolding utility to quickly initialize directory structures, virtual enviro
 
   * Git Integration: Use the -g flag to initialize a Git repo and generate a language-specific .gitignore.
 
+### **4\. Mood Music (mood)**
+
+* A background music utility that streams curated playlists using mpv.
+
+* Command: mood [lofi|rain|jazz] or mood stop
+
+* Key Features:
+
+  * Streaming: Streams high-quality audio from YouTube directly to your terminal.
+
+  * Background Execution: Runs in the background, allowing you to continue working while listening.
+
+  * Process Control: Easily stop the music using the stop argument, which terminates the mpv process.
+
 ## **Requirements**
 
-* **Linux:** bash, python3, git, and apt package manager (for upkeep).  
+* **Linux:** bash, python3, git, and apt package manager (for upkeep). 
+  * Media Player: mpv and yt-dlp (or youtube-dl) are required for the mood script to function.
 * **WSL:** Ensure powershell.exe is available in your WSL path (standard in most setups) to use the wb command effectively.

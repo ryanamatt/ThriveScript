@@ -1,0 +1,15 @@
+This Text File is a few random ideas for possible scripts to add (not in any order)
+
+winpath - convert a Windows path (copy-pasted from File Explorer) into a WSL path and cd you there instantly.
+
+teleport - Instead of typing long paths, you "tag" a directory and jump back to it from anywhere.
+
+life - Display Conway's Game of Life in the terminal
+
+shredder - A security-focused version of upkeep's cleanup functions.
+
+winclip - A low-level bridge for the WSL/Windows clipboard.
+
+campefire - ASCII fireplace + ambient crackling audio.
+
+pulse - Tiny system dashboard in terminal. CPU, RAM, temps, battery, network, distro, uptime.
