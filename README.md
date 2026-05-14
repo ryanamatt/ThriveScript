@@ -11,7 +11,7 @@ This project contains a collection of helpful scripts designed for Linux environ
 * mood.sh: A terminal-based background music utility.c
 * winpath.sh: A utility to convert Windows File Explorer paths to WSL paths and navigate to them instantly.
 * teleport.sh: A directory bookmarking utility to save and jump to frequently used paths.
-* script.c: A utility to print out the pulse or system information of the machine.
+* pulse.c: A utility to print out the pulse or system information of the machine.
 
 ## **Installation**
 

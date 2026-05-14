@@ -14,7 +14,7 @@ NC='\033[0m'
 
 SOURCE_DIR=$(pwd)
 DEST_DIR="/usr/local/bin"
-FUNC_FILE="$HOME/.thrive_scripts.sh"
+FUNC_FILE="$HOME/.thrive.sh"
 
 FILES=(
     "upkeep.sh:upkeep"
@@ -67,7 +67,7 @@ done
 # --- Manage shell scripts and bashrc ---
 
 echo "Updating thrive scripts..."
-cp "$SOURCE_DIR/thrive_scripts.sh" "$FUNC_FILE"
+cp "$SOURCE_DIR/thrive.sh" "$FUNC_FILE"
 
 MARKER="# [Thrive-Scripts-Auto-Source]"
 # Define the actual line to append (using single quotes so $HOME isn't evaluated yet)
@@ -85,7 +85,7 @@ fi
 echo "Cleaning up build artifacts..."
 if [ -f "$SOURCE_DIR/pulse" ]; then
     rm "$SOURCE_DIR/pulse"
-    echo "Removed compiled binary: pulse"
+    echo "Removed compiled binaries..."
 fi
 
 echo -e "${GREEN}Installation complete!${NC}"
