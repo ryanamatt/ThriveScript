@@ -8,6 +8,7 @@
 
 SOURCE_DIR=$(pwd)
 DEST_DIR="/usr/local/bin"
+FUNC_FILE="$HOME/.thrive_scripts.sh"
 
 FILES=(
     "upkeep.sh:upkeep"
@@ -50,4 +51,22 @@ for entry in "${FILES[@]}";  do
 
 done
 
-echo "Done!"
+# --- Manage shell scripts and bashrc ---
+
+echo "Updating thrive script functions..."
+cp "$SOURCE_DIR/thrive_scripts.sh" "$FUNC_FILE"
+
+MARKER="# [Thrive-Scripts-Auto-Source]"
+# Define the actual line to append (using single quotes so $HOME isn't evaluated yet)
+SOURCE_CMD='[[ -f "$HOME/.thrive_scripts.sh" ]] && source "$HOME/.thrive_scripts.sh"'
+
+echo "Updating thrive script functions..."
+cp "$SOURCE_DIR/thrive_scripts.sh" "$FUNC_FILE"
+
+# Search for the MARKER instead of the complex code line
+if ! grep -Fq "$MARKER" "$HOME/.bashrc"; then
+    echo "Adding source command to ~/.bashrc..."
+    echo -e "\n$MARKER\n$SOURCE_CMD" >> "$HOME/.bashrc"
+else
+    echo "Entry already exists in ~/.bashrc, skipping."
+fi

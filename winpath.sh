@@ -11,7 +11,7 @@ NC='\033[0m'
 
 if [ -z "$1" ]; then
     echo -e "${RED}Usage:${NC} winpath \"C:\\path\\to\\folder\""
-    exit 1
+    return 1
 fi
 
 # Combine all arguments in case the user didn't use quotes
@@ -19,7 +19,7 @@ input_path="$*"
 
 if [ -z "$input_path" ]; then
     echo -e "${BLUE}Usage:${NC} winpath <C:\\path\\to\\folder>"
-    exit 1
+    return 1
 fi
 
 # Use the built-in wslpath utility (-u converts Windows to Unix/WSL)

@@ -19,6 +19,14 @@ To install or update the scripts, run the included installation script from the 
 ./install_scripts.sh
 ```
 
+What the installer does:
+
+* Binary Integration: Copies scripts to /usr/local/bin and ensures they are executable.
+
+* Smart Updates: Uses md5sum to compare file hashes, skipping files that haven't changed.
+
+* Automatically adds a source command to your ~/.bashrc (marked with [Thrive-Scripts-Auto-Source]) so that utilities like winpath work correctly in every new terminal session.
+
 **Note:** The installer uses md5sum to check if your installed versions are already up to date, skipping the copy process if no changes are detected.
 
 ## **Script Descriptions**
@@ -86,7 +94,7 @@ Note: For paths containing spaces or to ensure best results, wrap the Windows pa
 
 ## **Requirements**
 
-* **Linux:** bash, python3, git, and apt package manager (for upkeep).
+* **Linux:** bash, python3, git, grep and apt package manager (for upkeep).
   * Media Player: mpv and yt-dlp (or youtube-dl) are required for the mood script to function.
 * **WSL:** Ensure powershell.exe is available in your WSL path (standard in most setups) to use the wb command effectively.
   * WSL Tools: wslpath (built into WSL) is used for path translation in the winpath script.
