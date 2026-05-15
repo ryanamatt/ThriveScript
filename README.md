@@ -18,6 +18,7 @@ bridge the gap between the WSL terminal and the Windows host browser.
 * life.c: A terminal-based implementation of Conway's Game of Life written in C.
 * dub.sh: A utility to nickname complex commands and execute them dynamically without editing shell 
   configuration files.  
+* shredder.c: A security utility that overwrites files multiple times before deletion.
 
 ## **Installation**
 
@@ -162,7 +163,7 @@ A terminal-based visualization of Conway’s Game of Life, using high-performanc
   * Infinite Loop: Runs continuously until interrupted (Ctrl+C), simulating the infinite evolution 
     of cellular automata.
 
-### 9\. Dub Commands (dub)
+### **9\. Dub Command (dub)**
 
 A utility to temporarily or permanently "dub" a long, complex command with a short nickname without manually editing .bashrc.
 
@@ -179,6 +180,23 @@ A utility to temporarily or permanently "dub" a long, complex command with a sho
   * Management: View all saved nicknames with dub list, or delete them using remove or clear.
 
   * Flexible Input: Handles multi-word commands and arguments automatically.
+
+## **10\. Shredder (shred)**
+
+A security-focused version of upkeep's cleanup functions designed to prevent data recovery.  
+
+* Command: shred [filename]
+
+* Key Features:
+
+  * Secure Erasure: Instead of a simple deletion, it overwrites a file multiple times with random 
+    data before removing it from the system.  
+
+  * Low-Level Overwrite: Directly accesses the file to replace its contents, ensuring that standard 
+    recovery tools cannot easily retrieve the original data.  
+
+  * System Integration: Intended as an advanced cleanup tool for sensitive files within the 
+    ThriveScript ecosystem.
 
 ## **Requirements**
 

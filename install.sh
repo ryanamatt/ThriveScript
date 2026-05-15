@@ -17,15 +17,18 @@ DEST_DIR="/usr/local/bin"
 FUNC_FILE="$HOME/.thrive.sh"
 
 FILES=(
-    "upkeep.sh:upkeep"
     "wb.py:wb"
     "sprout.py:sprout"
+    
+    "upkeep.sh:upkeep"
     "mood.sh:mood"
     "winpath.sh:winpath"
     "teleport.sh:teleport"
+    "dub.sh:dub"
+
     "pulse:pulse"
     "life:life"
-    "dub.sh:dub"
+    "shred:shred"
 )
 
 echo "Compiling Code..."
