@@ -1,6 +1,8 @@
 # **ThriveScript - Linux & WSL Utility Scripts**
 
-This project contains a collection of helpful scripts designed for Linux environments (optimized for Ubuntu) and Windows Subsystem for Linux (WSL). These utilities streamline system maintenance and bridge the gap between the WSL terminal and the Windows host browser.
+This project contains a collection of helpful scripts designed for Linux environments (optimized for 
+Ubuntu) and Windows Subsystem for Linux (WSL). These utilities streamline system maintenance and 
+bridge the gap between the WSL terminal and the Windows host browser.
 
 ## **Project Structure**
 
@@ -9,14 +11,18 @@ This project contains a collection of helpful scripts designed for Linux environ
 * wb.py: A Python-based web search tool that works across native Linux and WSL.
 * sprout.py: A Python-based project scaffolder.
 * mood.sh: A terminal-based background music utility.c
-* winpath.sh: A utility to convert Windows File Explorer paths to WSL paths and navigate to them instantly.
+* winpath.sh: A utility to convert Windows File Explorer paths to WSL paths and navigate to them 
+  instantly.
 * teleport.sh: A directory bookmarking utility to save and jump to frequently used paths.
 * pulse.c: A utility to print out the pulse or system information of the machine.
-* life.c: A terminal-based implementation of Conway's Game of Life written in C.  
+* life.c: A terminal-based implementation of Conway's Game of Life written in C.
+* dub.sh: A utility to nickname complex commands and execute them dynamically without editing shell 
+  configuration files.  
 
 ## **Installation**
 
-To install or update the scripts, run the included installation script from the project root. This will copy the tools to /usr/local/bin and ensure they are executable.
+To install or update the scripts, run the included installation script from the project root. This 
+will copy the tools to /usr/local/bin and ensure they are executable.
 
 ```{Bash}
 ./install.sh
@@ -24,13 +30,15 @@ To install or update the scripts, run the included installation script from the 
 
 What the installer does:
 
-* Binary Compilation: Looks for C/C++ code compiles it using gcc/g++, and moves the resulting binary to /usr/local/bin before cleaning up the build artifacts.
+* Binary Compilation: Looks for C/C++ code compiles it using gcc/g++, and moves the resulting binary 
+  to /usr/local/bin before cleaning up the build artifacts.
 
 * Binary Integration: Copies scripts to /usr/local/bin and ensures they are executable.
 
 * Smart Updates: Uses md5sum to compare file hashes, skipping files that haven't changed.
 
-* Automatically adds a source command to your ~/.bashrc (marked with [Thrive-Scripts-Auto-Source]) so that utilities like winpath work correctly in every new terminal session.
+* Automatically adds a source command to your ~/.bashrc (marked with [Thrive-Scripts-Auto-Source]) 
+  so that utilities like winpath work correctly in every new terminal session.
 
 ## **Script Descriptions**
 
@@ -50,12 +58,15 @@ A maintenance script to keep your Ubuntu/Debian system clean and updated.
 A cross-platform search utility that opens a Google search directly from your terminal.
 
 * **Command:** wb "search query" or wb search terms  
-* **WSL Support:** If running inside WSL, it uses PowerShell to trigger the default browser on your Windows host.  
-* **Native Linux Support:** Uses the standard webbrowser module to open your default Linux GUI browser.
+* **WSL Support:** If running inside WSL, it uses PowerShell to trigger the default browser on your 
+  Windows host.  
+* **Native Linux Support:** Uses the standard webbrowser module to open your default Linux GUI 
+  browser.
 
 ### **3\. Sprout Project Scaffolder (sprout)**
 
-A scaffolding utility to quickly initialize directory structures, virtual environments, and Git repositories for new projects.
+A scaffolding utility to quickly initialize directory structures, virtual environments, and Git 
+  repositories for new projects.
 
 * Command: sprout [project_name] [options]
 
@@ -63,11 +74,13 @@ A scaffolding utility to quickly initialize directory structures, virtual enviro
 
 * Key Features:
 
-  * Python: Automatically creates a venv, generates a pyproject.toml, and can install specified libraries using --libs.
+  * Python: Automatically creates a venv, generates a pyproject.toml, and can install specified 
+    libraries using --libs.
 
   * C/C++: Sets up a src/include/build directory structure and can generate a basic Makefile.
 
-  * Git Integration: Use the -g flag to initialize a Git repo and generate a language-specific .gitignore.
+  * Git Integration: Use the -g flag to initialize a Git repo and generate a language-specific 
+    .gitignore.
 
 ### **4\. Mood Music (mood)**
 
@@ -89,15 +102,18 @@ A utility that bridges Windows File Explorer with the WSL terminal by translatin
 
 * Command: winpath "C:\Users\Name\Downloads"
 
-* Handling Backslashes: Optimized to handle Windows-style backslashes and drive letters (e.g., C: to /mnt/c).
+* Handling Backslashes: Optimized to handle Windows-style backslashes and drive letters 
+  (e.g., C: to /mnt/c).
 
 * Instant Navigation: Automatically changes your current terminal directory to the translated path.
 
-Note: For paths containing spaces or to ensure best results, wrap the Windows path in single quotes: winpath 'C:\Users\Name\Folder Name'.
+Note: For paths containing spaces or to ensure best results, wrap the Windows path in single quotes: 
+  winpath 'C:\Users\Name\Folder Name'.
 
 ### **6\. Teleport (teleport)**
 
-A directory bookmarking utility that allows you to "tag" directories and jump back to them instantly from anywhere in the file system.
+A directory bookmarking utility that allows you to "tag" directories and jump back to them instantly 
+  from anywhere in the file system.
 
 * Command: teleport [tag | add [tag] | list | remove [tag] | clear]
 
@@ -121,25 +137,48 @@ A lightweight system monitor written in C that provides a snapshot of your syste
 
   * System Info: Displays your current Linux distribution and system uptime.
 
-  * Live Metrics: Shows real-time CPU usage percentage and a visual progress bar for RAM consumption (Used/Total MB).
+  * Live Metrics: Shows real-time CPU usage percentage and a visual progress bar for RAM consumption 
+    (Used/Total MB).
 
   * Process Tracking: Displays the count of currently running processes.
 
 ### **8\. Life (life)**
 
-A terminal-based visualization of Conway’s Game of Life, using high-performance C and ANSI escape codes for a smooth, colorful experience.
+A terminal-based visualization of Conway’s Game of Life, using high-performance C and ANSI escape 
+  codes for a smooth, colorful experience.
 
 * Command: life
 
 * Key Features:
 
-  * Dynamic Seeding: Uses the system clock to generate a unique random starting population every time the script is run.
+  * Dynamic Seeding: Uses the system clock to generate a unique random starting population every 
+    time the script is run.
 
-  * Visuals: Utilizes ANSI color codes for green "living" cells and handles terminal refreshing without screen flickering.
+  * Visuals: Utilizes ANSI color codes for green "living" cells and handles terminal refreshing 
+    without screen flickering.
   
   * Performance: Optimized in C to handle neighbor-calculation logic efficiently on a 60x30 grid.
   
-  * Infinite Loop: Runs continuously until interrupted (Ctrl+C), simulating the infinite evolution of cellular automata.
+  * Infinite Loop: Runs continuously until interrupted (Ctrl+C), simulating the infinite evolution 
+    of cellular automata.
+
+### 9\. Dub Commands (dub)
+
+A utility to temporarily or permanently "dub" a long, complex command with a short nickname without manually editing .bashrc.
+
+* Command: dub [name | add [name] [command] | list | remove [name] | clear]
+
+* Storage: Nicknames are stored in .dub_aliases in the user's home directory.
+
+* Key Features:
+
+  * Add Nicknames: Save a complex command string to a short name using dub add [name] [command].
+
+  * Dynamic Execution: Run the dubbed command instantly by typing dub [name].
+
+  * Management: View all saved nicknames with dub list, or delete them using remove or clear.
+
+  * Flexible Input: Handles multi-word commands and arguments automatically.
 
 ## **Requirements**
 

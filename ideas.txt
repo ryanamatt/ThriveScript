@@ -9,9 +9,6 @@ campefire - ASCII fireplace + ambient crackling audio.
 
 ritual - Morning Ritual Type of Stuff
 
-dub - A utility to temporarily or permanently "dub" a long, complex command with 
-    a short nickname without manually editing .bashrc
-
 vitals - An automated version of pulse that runs in the background and sends a notify alert if CPU 
     or RAM usage exceeds a certain threshold.
 

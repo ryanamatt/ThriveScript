@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# install_scripts.sh - Syncs local scripts to /usr/local/bin
+# install.sh - Syncs local scripts to /usr/local/bin
 #
 # This script iterates through the FILES array, checks for changes using 
 # MD5 hashes, and updates the system binaries if the local version is newer.
-# Usage: ./install_scripts.sh
+# Usage: ./install.sh
 
 # Define Colors
 BLUE='\033[0;34m'
@@ -25,12 +25,10 @@ FILES=(
     "teleport.sh:teleport"
     "pulse:pulse"
     "life:life"
+    "dub.sh:dub"
 )
 
 echo "Compiling Code..."
-# if [ -f "pulse.c" ]; then
-#     gcc pulse.c -o pulse
-# fi
 for c_file in *.c; do
     if [ -f "$c_file" ]; then
         binary_name="${c_file%.*}"
