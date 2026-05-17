@@ -25,6 +25,7 @@ playlists=(
 if [[ "$1" == "stop" ]]; then
   echo -e "${RED}Stopping the music...${NC}"
   pkill mpv
+  rm -f "$HOME/.mood_state"
   exit 0
 fi
 
@@ -35,6 +36,9 @@ if [[ -z "$1" || -z "${playlists[$1]}" ]]; then
 fi
 
 echo -e "${GREEN}Setting the mood: $1...${NC}"
+
+# Write current mood to state file so vinyl can read it instantly
+echo "$1" > "$HOME/.mood_state"
 
 # Execute mpv with specific flags for terminal background play
 mpv --no-video \

@@ -25,6 +25,7 @@ FILES=(
     "winpath.sh:winpath"
     "teleport.sh:teleport"
     "dub.sh:dub"
+    "vinyl.sh:vinyl"
 
     "pulse:pulse"
     "life:life"

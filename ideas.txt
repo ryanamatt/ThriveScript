@@ -1,8 +1,5 @@
 This Text File is a few random ideas for possible scripts to add (not in any order)
 
-shredder - A security-focused version of upkeep's cleanup functions. Overrites a file multiple times 
-    before removing it.
-
 winclip - A low-level bridge for the WSL/Windows clipboard.
 
 campefire - ASCII fireplace + ambient crackling audio.
@@ -17,6 +14,3 @@ weave - A script that generates terminal-based ASCII fractals (like the Mandelbr
 
 canvas- A minimal terminal drawing tool where you use arrow keys to "paint" with ASCII characters 
     and ANSI colors.
-
-vinyl - visualizer for the mood script that displays a spinning ASCII record or a moving waveform 
-    while the audio streams.
